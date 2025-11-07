@@ -104,7 +104,7 @@ def google(docstring: str) -> str:
     )
 
 
-GOOGLE_LIST_SECTIONS = ["Args", "Raises", "Attributes", "Keyword Args"]
+GOOGLE_LIST_SECTIONS = ["Args", "Raises", "Attributes", "Keyword Args", "Returns"]
 """Section headers listed in the official Google docstring style guide."""
 
 GOOGLE_LIST_SECTION_ALIASES = {

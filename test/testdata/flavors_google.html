@@ -134,6 +134,9 @@
             <li>
                     <a class="function" href="#keyword_arguments">keyword_arguments</a>
             </li>
+            <li>
+                    <a class="function" href="#multiple_return_values">multiple_return_values</a>
+            </li>
     </ul>
 
 
@@ -663,6 +666,23 @@ with it.</p></li>
 </span><span id="L-465"><a href="#L-465"><span class="linenos">465</span></a><span class="sd">        str_arg (str): First string argument.</span>
 </span><span id="L-466"><a href="#L-466"><span class="linenos">466</span></a><span class="sd">        int_arg (int): Second integer argument.</span>
 </span><span id="L-467"><a href="#L-467"><span class="linenos">467</span></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="L-468"><a href="#L-468"><span class="linenos">468</span></a>
+</span><span id="L-469"><a href="#L-469"><span class="linenos">469</span></a>
+</span><span id="L-470"><a href="#L-470"><span class="linenos">470</span></a><span class="k">def</span><span class="w"> </span><span class="nf">multiple_return_values</span><span class="p">(</span><span class="n">param1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">param2</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
+</span><span id="L-471"><a href="#L-471"><span class="linenos">471</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Example function with multiple return values.</span>
+</span><span id="L-472"><a href="#L-472"><span class="linenos">472</span></a>
+</span><span id="L-473"><a href="#L-473"><span class="linenos">473</span></a><span class="sd">    Args:</span>
+</span><span id="L-474"><a href="#L-474"><span class="linenos">474</span></a><span class="sd">        param1 (int): The first parameter.</span>
+</span><span id="L-475"><a href="#L-475"><span class="linenos">475</span></a><span class="sd">        param2 (str): The second parameter.</span>
+</span><span id="L-476"><a href="#L-476"><span class="linenos">476</span></a>
+</span><span id="L-477"><a href="#L-477"><span class="linenos">477</span></a><span class="sd">    Returns:</span>
+</span><span id="L-478"><a href="#L-478"><span class="linenos">478</span></a><span class="sd">        return1 (bool): The first return value.</span>
+</span><span id="L-479"><a href="#L-479"><span class="linenos">479</span></a><span class="sd">        return2 (float): The second return value.</span>
+</span><span id="L-480"><a href="#L-480"><span class="linenos">480</span></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="L-481"><a href="#L-481"><span class="linenos">481</span></a>
+</span><span id="L-482"><a href="#L-482"><span class="linenos">482</span></a>    <span class="n">return1</span> <span class="o">=</span> <span class="kc">True</span>
+</span><span id="L-483"><a href="#L-483"><span class="linenos">483</span></a>    <span class="n">return2</span> <span class="o">=</span> <span class="mf">3.14</span>
+</span><span id="L-484"><a href="#L-484"><span class="linenos">484</span></a>    <span class="k">return</span> <span class="n">return1</span><span class="p">,</span> <span class="n">return2</span>
 </span></pre></div>
 
 
@@ -743,9 +763,9 @@ included in the docstring:</p>
 
 <h6 id="returns">Returns:</h6>
 
-<blockquote>
-  <p>bool: The return value. True for success, False otherwise.</p>
-</blockquote>
+<ul>
+<li><strong>bool:</strong>  The return value. True for success, False otherwise.</li>
+</ul>
 </div>
 
 
@@ -787,9 +807,9 @@ included in the docstring:</p>
 
 <h6 id="returns">Returns:</h6>
 
-<blockquote>
-  <p>The return value. True for success, False otherwise.</p>
-</blockquote>
+<ul>
+<li>The return value. True for success, False otherwise.</li>
+</ul>
 </div>
 
 
@@ -891,24 +911,20 @@ Second line of description should be indented.</li>
 
 <h6 id="returns">Returns:</h6>
 
-<blockquote>
-  <p>bool: True if successful, False otherwise.</p>
-  
-  <p>The return type is optional and may be specified at the beginning of
-  the <code>Returns</code> section followed by a colon.</p>
-  
-  <p>The <code>Returns</code> section may span multiple lines and paragraphs.
-  Following lines should be indented to match the first line.</p>
-  
-  <p>The <code>Returns</code> section supports any reStructuredText formatting,
-  including literal blocks::</p>
+<ul>
+<li><strong>bool:</strong>  True if successful, False otherwise.</li>
+<li>The return type is optional and may be specified at the beginning of</li>
+<li>the <code>Returns</code> section followed by a colon.</li>
+<li>The <code>Returns</code> section may span multiple lines and paragraphs.</li>
+<li>Following lines should be indented to match the first line.</li>
+<li>The <code>Returns</code> section supports any reStructuredText formatting,</li>
+<li><p><strong>including literal blocks:</strong> :</p>
 
-<pre><code>{
+<p>{
     'param1': param1,
     'param2': param2
-}
-</code></pre>
-</blockquote>
+}</p></li>
+</ul>
 
 <h6 id="raises">Raises:</h6>
 
@@ -1514,9 +1530,9 @@ mentioned here.</p>
 
 <h6 id="returns">Returns:</h6>
 
-<blockquote>
-  <p>True if successful, False otherwise.</p>
-</blockquote>
+<ul>
+<li>True if successful, False otherwise.</li>
+</ul>
 </div>
 
 
@@ -1586,19 +1602,17 @@ rows with values set for all keys will be returned.</li>
 
 <h6 id="returns">Returns:</h6>
 
-<blockquote>
-  <p>A dict mapping keys to the corresponding table row data
-  fetched. Each row is represented as a tuple of strings. For
-  example:</p>
-  
-  <p>{b'Serak': ('Rigel VII', 'Preparer'),
-   b'Zim': ('Irk', 'Invader'),
-   b'Lrrr': ('Omicron Persei 8', 'Emperor')}</p>
-  
-  <p>Returned keys are always bytes.  If a key from the keys argument is
-  missing from the dictionary, then that row was not found in the
-  table (and require_all_keys must have been False).</p>
-</blockquote>
+<ul>
+<li>A dict mapping keys to the corresponding table row data</li>
+<li>fetched. Each row is represented as a tuple of strings. For</li>
+<li><strong>example:</strong> </li>
+<li><strong>{b'Serak':</strong>  ('Rigel VII', 'Preparer'),
+b'Zim': ('Irk', 'Invader'),
+b'Lrrr': ('Omicron Persei 8', 'Emperor')}</li>
+<li>Returned keys are always bytes.  If a key from the keys argument is</li>
+<li>missing from the dictionary, then that row was not found in the</li>
+<li>table (and require_all_keys must have been False).</li>
+</ul>
 
 <h6 id="raises">Raises:</h6>
 
@@ -1676,19 +1690,17 @@ for all keys will be returned.</li>
 
 <h6 id="returns">Returns:</h6>
 
-<blockquote>
-  <p>A dict mapping keys to the corresponding table row data
-  fetched. Each row is represented as a tuple of strings. For
-  example:</p>
-  
-  <p>{b'Serak': ('Rigel VII', 'Preparer'),
-   b'Zim': ('Irk', 'Invader'),
-   b'Lrrr': ('Omicron Persei 8', 'Emperor')}</p>
-  
-  <p>Returned keys are always bytes.  If a key from the keys argument is
-  missing from the dictionary, then that row was not found in the
-  table (and require_all_keys must have been False).</p>
-</blockquote>
+<ul>
+<li>A dict mapping keys to the corresponding table row data</li>
+<li>fetched. Each row is represented as a tuple of strings. For</li>
+<li><strong>example:</strong> </li>
+<li><strong>{b'Serak':</strong>  ('Rigel VII', 'Preparer'),
+b'Zim': ('Irk', 'Invader'),
+b'Lrrr': ('Omicron Persei 8', 'Emperor')}</li>
+<li>Returned keys are always bytes.  If a key from the keys argument is</li>
+<li>missing from the dictionary, then that row was not found in the</li>
+<li>table (and require_all_keys must have been False).</li>
+</ul>
 
 <h6 id="raises">Raises:</h6>
 
@@ -1998,6 +2010,54 @@ there is unexpected whitespace before test.</li>
 <ul>
 <li><strong>str_arg (str):</strong>  First string argument.</li>
 <li><strong>int_arg (int):</strong>  Second integer argument.</li>
+</ul>
+</div>
+
+
+                </section>
+                <section id="multiple_return_values">
+                            <input id="multiple_return_values-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
+<div class="attr function">
+            
+        <span class="def">def</span>
+        <span class="name">multiple_return_values</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">param1</span><span class="p">:</span> <span class="nb">int</span>, </span><span class="param"><span class="n">param2</span><span class="p">:</span> <span class="nb">str</span></span><span class="return-annotation">) -> <span class="nb">tuple</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span>:</span></span>
+
+                <label class="view-source-button" for="multiple_return_values-view-source"><span>View Source</span></label>
+
+    </div>
+    <a class="headerlink" href="#multiple_return_values"></a>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="multiple_return_values-471"><a href="#multiple_return_values-471"><span class="linenos">471</span></a><span class="k">def</span><span class="w"> </span><span class="nf">multiple_return_values</span><span class="p">(</span><span class="n">param1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">param2</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
+</span><span id="multiple_return_values-472"><a href="#multiple_return_values-472"><span class="linenos">472</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Example function with multiple return values.</span>
+</span><span id="multiple_return_values-473"><a href="#multiple_return_values-473"><span class="linenos">473</span></a>
+</span><span id="multiple_return_values-474"><a href="#multiple_return_values-474"><span class="linenos">474</span></a><span class="sd">    Args:</span>
+</span><span id="multiple_return_values-475"><a href="#multiple_return_values-475"><span class="linenos">475</span></a><span class="sd">        param1 (int): The first parameter.</span>
+</span><span id="multiple_return_values-476"><a href="#multiple_return_values-476"><span class="linenos">476</span></a><span class="sd">        param2 (str): The second parameter.</span>
+</span><span id="multiple_return_values-477"><a href="#multiple_return_values-477"><span class="linenos">477</span></a>
+</span><span id="multiple_return_values-478"><a href="#multiple_return_values-478"><span class="linenos">478</span></a><span class="sd">    Returns:</span>
+</span><span id="multiple_return_values-479"><a href="#multiple_return_values-479"><span class="linenos">479</span></a><span class="sd">        return1 (bool): The first return value.</span>
+</span><span id="multiple_return_values-480"><a href="#multiple_return_values-480"><span class="linenos">480</span></a><span class="sd">        return2 (float): The second return value.</span>
+</span><span id="multiple_return_values-481"><a href="#multiple_return_values-481"><span class="linenos">481</span></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="multiple_return_values-482"><a href="#multiple_return_values-482"><span class="linenos">482</span></a>
+</span><span id="multiple_return_values-483"><a href="#multiple_return_values-483"><span class="linenos">483</span></a>    <span class="n">return1</span> <span class="o">=</span> <span class="kc">True</span>
+</span><span id="multiple_return_values-484"><a href="#multiple_return_values-484"><span class="linenos">484</span></a>    <span class="n">return2</span> <span class="o">=</span> <span class="mf">3.14</span>
+</span><span id="multiple_return_values-485"><a href="#multiple_return_values-485"><span class="linenos">485</span></a>    <span class="k">return</span> <span class="n">return1</span><span class="p">,</span> <span class="n">return2</span>
+</span></pre></div>
+
+
+            <div class="docstring"><p>Example function with multiple return values.</p>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>param1 (int):</strong>  The first parameter.</li>
+<li><strong>param2 (str):</strong>  The second parameter.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<ul>
+<li><strong>return1 (bool):</strong>  The first return value.</li>
+<li><strong>return2 (float):</strong>  The second return value.</li>
 </ul>
 </div>
 

@@ -465,3 +465,20 @@ def keyword_arguments(**kwargs):
         str_arg (str): First string argument.
         int_arg (int): Second integer argument.
     """
+
+
+def multiple_return_values(param1: int, param2: str) -> tuple[bool, float]:
+    """Example function with multiple return values.
+
+    Args:
+        param1 (int): The first parameter.
+        param2 (str): The second parameter.
+
+    Returns:
+        return1 (bool): The first return value.
+        return2 (float): The second return value.
+    """
+
+    return1 = True
+    return2 = 3.14
+    return return1, return2
